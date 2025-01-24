@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 80vh;
+  overflow-x: hidden;
+  background-color: #060d08;
+  color: white;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+#Dominik {
+  font-size: 3rem;
+  color: #cd8a39 ;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.Dominik:hover {
+  transform: scale(1.5);
+}
+
+nav a {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  font-weight: 400;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+  color: #e8d1a7;
+}
+
+
+
+a:hover,
+a.active {
+  color:#cd8a39;
+  border-bottom: 3px solid #cd8a39;
+}
+
+@media(max-width:995px){
+  nav{
+      position: absolute;
+      display: none;
+      top: 0;
+      right: 0;
+      width: 40%;
+      border-left: 3px solid #cd8a39;
+      border-bottom: 3px solid #cd8a39;
+      border-bottom-left-radius: 2rem;
+      padding: 1rem solid;
+      background-color: #060d08;
+      border-top: 0.1rem solid rgb(6, 13, 8);
+  }
+
+  nav.active{
+      display: block;
+  }
+
+  nav a{
+      display: block;
+      font-size: 2rem;
+      margin: 3rem 0;
+  }
+
+  nav a:hover,
+  nav a.active{
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-bottom: 0.5rem solid #b74b4b;
+  }
+}
+
+section {
+  margin-top: 5vh;
+  min-height: 80vh;
+  padding: 5rem 10% 5rem;
+}
+.home {
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+}
+
+.home .home-content h1{
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #e8d1a7;
+}
+
+.home-content h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #e8d1a7;
+}
+
+span{
+  color: #cd8a39;
+}
+
+.home-content p{
+  font-size: 1rem;
+  color: #e8d1a7;
+}
+
+.home-img{
+  border-radius: 50%;
+}
+
+.home-img img{
+  position: relative;
+  width: 27vw;
+  border-radius: 20%;
+  box-shadow: 0 0 25px solid #b74b4b;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.home-img img:hover{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.icon a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid #cd8a39;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #cd8a39;
+}
+
+.icon a:hover{
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #cd8a39;
+  box-shadow: 0  0 25px #cd8a39;
+}
+
+.typing-text{
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.typing-text span{
+  position: relative;
+}
+
+.typing-text span::before{
+  content: "Frontend Developer";
+  color: #cd8a39;
+  animation: words 15s infinite;
+}
+
+.typing-text span::after{
+  content: "";
+  background-color: #060d08;
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid #060d08;
+  right: -8;
+  animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+  to{
+      border-left: 3px solid #cd8a39;
+  }
+}
+
+@keyframes words {
+  0%, 32%{
+    content: "Frontend Developer";
+  }
+  33%, 66% {
+    content: "Web Designer"
+  }
+  67%, 100% {
+    content: "Photographer";
+  }
+
+}
+
+@media (max-width: 1000px){
+  .home{
+      gap: 4rem;
+  }
+}
+
+@media(max-width:995px){
+  .home{
+      flex-direction: column;
+      margin: 5rem 4rem;
+  }
+
+  .home .home-content h3{
+      font-size: 2.5rem;
+  }
+
+  .home-content h1{
+      font-size: 5rem;
+  }
+
+  .home-img img{
+      width: 70vw;
+      margin-top: 4rem;
+  }
+}
